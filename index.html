@@ -5,79 +5,93 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Jost&family=Roboto+Mono&display=swap" rel="stylesheet">        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-       <div class="container">
+       <div class="container-1">
 
         <!-- Header -->
-        <header>
-            <div class="heading">
-            <h1>Hi, I'm Bai</h1> <!-- Typing animation -->
-            <h2>Aspire to deliver smart solutions</h2>
-            </div>
+            <header>
+                <div class="header-wrapper">
+                    <h1>Hi, I'm Bai</h1> <!-- Typing animation -->
+                    <div class="header-icons"> 
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
 
-            <div class="top-right"> 
-            Dark mode toggle 
-            </div>
+                <h2>A Junior Developer. I aspire to deliver smart solutions that serve the community.</h2> 
+            
+            
+            </header>
 
-        </header>
+            <div class="arrow-down">
+                <a href="#main" class="projects-link">View Projects</a> 
+            </div> 
+        
+        </div>
 
-        <!-- Main (Terminal look) -->
-        <main> 
-            <div class="main-top"> sohbaihe </div>
+        <a id="main">
+        <div class="container-2">
+            <!-- Main (Terminal look) -->
+            
+            <main> 
+                <div class="terminal-header"> sohbaihe </div>
 
-            <nav> 
-            <ul> 
-                <!-- Tabs style -->
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-            </ul>
-            </nav>
+                <nav class="terminal-tabs"> 
+                    <ul> 
+                        <!-- Tabs style -->
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                </nav>
 
-            <section>
+                <section>
 
-                <!-- About -->
-                <section id="section-about"> 
-                    <p>About Me intro</p>
+                    <!-- About -->
+                    <section id="section-about"> 
+                        <p>About Me intro</p>
+                    </section>
+
+                    <!-- Gallery -->
+                    <section id="section-project-gallery"> <!-- Grid style -->
+                        <p>Project Gallery</p>
+                        <div class="project-item">1</div>
+                        <div class="project-item">2</div>
+                        <div class="project-item">3</div>
+                        <div class="project-item">4</div>
+
+                    </section>
+
+                    <!-- Transition -->
+                    <section id="section-project-transition"> 
+                        cd/projects <!-- Typing animation -->
+                    </section>
+
+                    <!-- Project Details -->
+                    <section id="section-project-info">
+                        <img src="">
+                        <!--  
+                            > Description of Project
+                            > Demo Link 
+                        -->
+                    </section>
+
                 </section>
 
-                <!-- Gallery -->
-                <section id="section-project-gallery"> <!-- Grid style -->
-                    <p>Project Gallery</p>
-                    <div class="project-item">1</div>
-                    <div class="project-item">2</div>
-                    <div class="project-item">3</div>
-                    <div class="project-item">4</div>
+            </main>
 
-                </section>
+            <!-- Footer (Credits, Version, Social Media Links?) -->
 
-                <!-- Transition -->
-                <section id="section-project-transition"> 
-                    cd/projects <!-- Typing animation -->
-                </section>
-
-                <!-- Project Details -->
-                <section id="section-project-info">
-                    <img src="">
-                    <!--  
-                        > Description of Project
-                        > Demo Link 
-                    -->
-                </section>
-
-            </section>
-
-        </main>
-
-        <!-- Footer (Credits, Version, Social Media Links?) -->
-
-        <footer> 
-            V1.0 ..
-        </footer>
-
-       </div>
+            <footer> 
+                <a href="">Email</a> |
+                <a href="">LinkedIn</a> | 
+                <a href="">Github</a> | 
+                <a href="">Twitter</a>
+            </footer>
+        </div> 
+       
         
         <script src="" async defer></script>
     </body>

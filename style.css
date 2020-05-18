@@ -4,34 +4,85 @@
 }
 
 body {
-    font-family: 'Quicksand', sans-serif
+    font-family: 'Roboto Mono', monospace;
+    background: #cfcee1; 
 
 }
 
-.container {
+.container-1 {
+    display: flex;
+    flex-direction: column;
     max-width: 1000px;
-    margin: auto; 
+    height: 100vh; 
+    margin: 0 auto; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.container-2 {
+    max-width: 1000px;
+    margin: 0 auto; 
+    height: 100vh; 
+    
 }
 
 /* Header */ 
 header {
+    font-family: 'DM Mono', monospace;
+    margin: 20px; 
+    align-self: center; 
+
+
+}
+
+.header-wrapper {
     display: flex; 
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;
+    align-items: center; 
+}
+h1 { 
+    font-size: 3em; 
+    color: #454fac; 
+}
 
+h2 {
+    padding: 30px 0; 
+    font-size: 1.5em; 
+    font-family: 'Jost', sans-serif; 
+    color: #525F7F;
+}
+
+.fab {
+    color: #525F7F;
+    font-size: 2em; 
+
+ }
+
+.projects-link {
+    background-color: #454fac; 
+    border-radius: 5px; 
+    color: #fff;
+    padding: 15px; 
+    font-size: 1em; 
+    text-decoration: none; 
+}
+.arrow-down{
+    margin-top: 20vh; 
 }
 
 /* Main */ 
 
 main {
     max-width: 100%; 
-    margin-right: 25px; 
-    margin-left: 25px; 
+    margin: 10vh 20px;
+     
+    
 }
 
-.main-top {
-    background: #454141;
-    color: #fff;
+.terminal-header {
+    background: #e6e1ec;
+    color: #525f7f;  
     height: 20px;
     padding: 5px;
     text-align: center; 
@@ -42,8 +93,8 @@ main {
 }
 
 /* Main - Nav */ 
-ul {
-    background: #1d1d1e; 
+.terminal-tabs ul {
+    background: #e6e1ec;
     max-width: 100%; 
     height: 30px;
     margin: 0; 
@@ -52,24 +103,30 @@ ul {
 
 }
 
-li {
+.terminal-tabs li {
     display: block;
     width: 100%; 
     text-align: center; 
 }
 
-a {
-    color: #fff; 
+.terminal-tabs a {
+    color: #525f7f; 
+    text-decoration: none; 
 }
 
 /* Content */
 
 section { 
-    background: #1d1d1e; 
+    background: #3a3957; 
     color: #fff;
     height: 500px; 
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+
+}
+
+#section-about {
+    padding: 10px;
 }
 
 #section-project-gallery {
@@ -84,3 +141,10 @@ section {
     display: none; 
 }
 
+
+/* Footer */
+
+footer {
+    margin: 15vh; 
+    text-align: center; 
+}
