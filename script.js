@@ -1,9 +1,9 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+var scroll = new SmoothScroll('[data-scroll]', {
+	speed: 500,
+	speedAsDuration: true
 });
+
+document.getElementById('about-tab').addEventListener('click', function(e) {
+	document.getElementById('section-project-gallery').style.display = 'none';
+	document.getElementById('section-about').style.display = 'block'; 
+  });

@@ -6,6 +6,10 @@
     list-style: none;
 }
 
+/* html {
+    scroll-behavior: smooth !important;
+} */
+
 body {
     font-family: 'Roboto Mono', monospace;
     background: #cfcee1; 
@@ -155,6 +159,8 @@ main {
 
 .terminal-tabs li {
     background: #e6e1ec;
+    color: #525f7f; 
+    text-decoration: none; 
     border: 1px solid #f7f1ff; 
     display: block;
     width: 100%; 
@@ -174,11 +180,6 @@ main {
     /* border: solid 3px #a8a5f5;  */
 }
 
-.terminal-tabs a {
-    color: #525f7f; 
-    text-decoration: none; 
-}
-
 .terminal-tabs li:hover {
     opacity: 50%; 
     cursor: pointer; 
@@ -191,21 +192,26 @@ section {
     background: #3a3957; 
     color: #fff;
     height: 500px; 
+    line-height: 3em; 
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 
 }
 
+  
 #section-about {
-    padding: 10px;
+    padding: 30px;
+    display: none;
+
 }
 
 #section-project-gallery {
-    display: none; 
-}
+    padding: 30px;
+    display: block;
+} 
 
 #section-project-transition {
-    display: none; 
+    display: none;
 }
 
 #section-project-info {

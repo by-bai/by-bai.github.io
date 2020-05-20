@@ -6,7 +6,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Jost&family=Roboto+Mono&display=swap" rel="stylesheet">        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Jost&family=Roboto+Mono&display=swap" rel="stylesheet">        <link rel="stylesheet" href="style.css"> 
+
     </head>
     <body>
        <div class="container-1">
@@ -29,7 +30,7 @@
             </header>
 
             <div class="call-to-action"">
-                <a href="#main" class="projects-link">View Projects</a> 
+                <a data-scroll class="projects-link" href="#main">View Projects</a> 
             </div> 
         
         </div>
@@ -49,18 +50,13 @@
                 <nav class="terminal-tabs"> 
                     <ul> 
                         <!-- Tabs style -->
-                        <li class="current-tab"><a href="#">projects</a></li>
-                        <li><a href="#">about</a></li>
+                        <li class="current-tab" id="projects-tab">projects</li>
+                        <li id="about-tab">about</li>
 
                     </ul>
                 </nav>
 
                 <section>
-
-                    <!-- About -->
-                    <section id="section-about"> 
-                        <p>About Me intro</p>
-                    </section>
 
                     <!-- Gallery -->
                     <section id="section-project-gallery"> <!-- Grid style -->
@@ -72,6 +68,21 @@
 
                     </section>
 
+                    <!-- About -->
+                    <section id="section-about"> 
+
+                    Current Location: "Singapore"
+                    <br>
+                    Education: "SMU Information Systems, Smart City Management & Technology Major"
+                    <br>
+                    Interests: ["Web Development", "Data Analytics", "Geospatial for Urban Planning"]
+                    <br>
+                    Skills: ["Python", "Flask", "HTML", "CSS", "Javascript", "QGIS"] 
+                    <br>
+                    Resume: <a href="">link</a>  
+                    </section>
+                
+
                     <!-- Transition -->
                     <section id="section-project-transition"> 
                         cd/projects <!-- Typing animation -->
@@ -80,6 +91,7 @@
                     <!-- Project Details -->
                     <section id="section-project-info">
                         <img src="">
+                        PROJECT DESC TEST 
                         <!--  
                             > Description of Project
                             > Demo Link 
@@ -100,7 +112,8 @@
             </footer>
         </div> 
        
-        
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
         <script src="script.js" async defer></script>
+    
     </body>
 </html>
