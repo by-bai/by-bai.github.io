@@ -8,37 +8,20 @@ var scroll = new SmoothScroll('[data-scroll]', {
 
 aboutTab = document.getElementById('about-tab');
 projectsTab = document.getElementById('projects-tab'); 
-aboutSection = document.getElementById('section-about');
-projectSection = document.getElementById('section-project-gallery'); 
-
-// aboutTab.addEventListener('click', function(e) {
-// 	projectSection.classList.add('hideMe');
-// 	aboutSection.classList.add('showMe')
-	
-//   });
+aboutSection = document.querySelector('.section-about')
+projectSection = document.querySelector('.section-project-gallery'); 
 
 
 aboutTab.addEventListener('click', function(e) {
-	projectSection.style.opacity = '0%'; 
+	projectSection.classList.add('hide'); 
+	aboutSection.classList.remove('hide');
 	
   });
 
-projectSection.addEventListener('transitionend', function(e) {
-	projectSection.style.display = 'none'; 
-	aboutSection.style.opacity = '100%'; 
-	aboutSection.style.display = 'block';
-	// projectSection.parentElement.removeChild(projectSection)
+
+projectsTab.addEventListener('click', function(e) {
+	aboutSection.classList.add('hide'); 
+	projectSection.classList.remove('hide');
 
   });
-
-	
-// function aboutSectionTransition(){
-// 	aboutSection.style.opacity = '100%';
-// 	aboutSection.style.display = 'block'; 
-// 	console.log(aboutSection.classList)
-// 	aboutSection.classList.add('show2');
-// }
-
-// click projects-tab 
-
 
