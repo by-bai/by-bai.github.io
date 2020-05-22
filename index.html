@@ -14,23 +14,16 @@
 
         <!-- Header -->
             <header>
-                <div class="header-wrapper">
-                    <h1>Hi, I'm Bai</h1> <!-- Typing animation -->
-                    <div class="header-icons"> 
-                        <i class="fab fa-linkedin"></i>
-                        <i class="fab fa-github"></i>
-                        <i class="fas fa-file-alt"></i> <!-- Insert tooltip: resume -->
+    
+                <h1 class="h1-typing">.</h1> <!-- Typing animation -->
 
-                    </div>
-                </div>
-
-                <h2>Junior Developer. I aspire to deliver smart solutions that serve the community.</h2> 
+                <h2 class="h2-typing"></h2> 
             
             
             </header>
 
             <div class="call-to-action"">
-                <a data-scroll class="projects-link" href="#main">View Projects</a> 
+                <a data-scroll class="view-projects" href="#main">View Projects</a> 
             </div> 
         
         </div>
@@ -44,7 +37,7 @@
                     <div class="circle-1"></div>
                     <div class="circle-2"></div>
                     <div class="circle-3"></div>
-                    <!-- <div class="terminal-header-text"> sohbaihe </div> -->
+                    <div class="terminal-header-text"> sohbaihe —— zsh</div>
                 </div>
 
                 <nav class="terminal-tabs"> 
@@ -56,63 +49,89 @@
                     </ul>
                 </nav>
 
-                <section>
+                <section class="terminal-body">
                  
 
-                    <!  -- Gallery -->
                     <div class="section-container">
                         <section class="section-project-gallery"> 
 
+                            <!-- Project Item -->
                             <div class="project-item">
-                                <div class="project-left">
-                                    <img src="project-1.png" width="445px">
-                                    <div class="project-tags">
-                                        <div class="project-tag">#Flask</div>
-                                        <div class="project-tag">#Pandas</div>
-                                        <div class="project-tag">#python-telegram-bot</div>
-                                    </div>   
-                                </div> 
-
-                                <div class="project-right"> 
-
-                                    <div class="project-title">Project Lock-It-Down Bot <br> (Proof-Of-Concept) </div>
-                                    <div class="project-desc">Dedicated locker management that better maps user demand to available lockers in SMU.
-                                    Users can simply book a locker through the telegram bot by selecting their desired locker.</div>
-                                    
-                                    <ul> 
-                                        <li>Demo</li>
-                                        <li>Source Code</li>
-                
-                                    </ul>
+                        
+                                <div class="img-wrapper">
+                                    <img class="project-img" src="project-1.png">
+                                    <div class="overlay">
+                                        <div class="text">Project Lock-It-Down Bot</div>
+                                    </div>
                                 </div>
-                            </div> 
+                                   
+                                <div class="project-tags">
+                                    <div class="project-tag">#Flask</div>
+                                    <div class="project-tag">#Pandas</div>
+                                    <div class="project-tag">#python-telegram-bot</div>
+                                </div>   
+                                
+                                <ul class="project-links"> 
+                                    <li>Demo</li>
+                                    <li>Source Code</li>
+            
+                                </ul>
 
+                            </div>
+
+                            
+                             <!-- Project Item -->
+                             <div class="project-item">
+                        
+                                <div class="img-wrapper">
+                                    <img class="project-img" src="project-1.png">
+                                    <div class="overlay">
+                                        <div class="text">Project Lock-It-Down Bot</div>
+                                    </div>
+                                </div>
+                                   
+                                <div class="project-tags">
+                                    <div class="project-tag">#HTML</div>
+                                    <div class="project-tag">#CSS</div>
+                                    <div class="project-tag">#Javascript</div>
+                                </div>   
+                                
+                                <ul class="project-links"> 
+                                    <li>Demo</li>
+                                    <li>Source Code</li>
+            
+                                </ul>
+
+                            </div>
+
+                            <!-- Project Item -->
                             <div class="project-item">
-                                <div class="project-left">
-                                    <img src="project-1.png" width="445px">
-                                    <div class="project-tags">
-                                        <div class="project-tag">#Flask</div>
-                                        <div class="project-tag">#Pandas</div>
-                                        <div class="project-tag">#python-telegram-bot</div>
-                                    </div>   
-                                </div> 
-
-                                <div class="project-right"> 
-
-                                    <div class="project-title">Project Lock-It-Down Bot <br> (Proof-Of-Concept) </div>
-                                    <div class="project-desc">Dedicated locker management that better maps user demand to available lockers in SMU.
-                                    Users can simply book a locker through the telegram bot by selecting their desired locker.</div>
-                                    
-                                    <ul> 
-                                        <li>Demo</li>
-                                        <li>Source Code</li>
                 
-                                    </ul>
+                                <div class="img-wrapper">
+                                    <img class="project-img" src="project-1.png">
+                                    <div class="overlay">
+                                        <div class="text">Project Lock-It-Down Bot</div>
+                                    </div>
                                 </div>
-                            </div> 
+                                    
+                                <div class="project-tags">
+                                    <div class="project-tag">#Flask</div>
+                                    <div class="project-tag">#Pandas</div>
+                                    <div class="project-tag">#python-telegram-bot</div>
+                                </div>   
+                                
+                                <ul class="project-links"> 
+                                    <li>Demo</li>
+                                    <li>Source Code</li>
+            
+                                </ul>
+
+                           </div>
+
+        
 
 
-                        </section>
+                        </section> 
 
                         <!-- About -->
                         <section class="section-about hide"> 
@@ -123,14 +142,15 @@
                         <div class="about-title">> education</div>
                         "SMU Information Systems, Smart City Management & Technology Major"<br>
 
-                        <div class="about-title">> resume</div>
-                        <a href="">link</a>  
-
                         <div class="about-title">> interest</div>
                         ["Web Development", "Data Analytics", "Geospatial for Urban Planning"]<br>
                         
                         <div class="about-title">> skills</div>
                         ["Python", "Flask", "HTML", "CSS", "Javascript", "QGIS"]<br>
+
+                        &#128206; <a class="resume-link" href="http://">baihe.resume</a>
+
+
                         
 
                         </section>
@@ -144,13 +164,38 @@
             <!-- Footer (Credits, Version, Social Media Links?) -->
 
             <footer> 
-                <a href="">Email</a> |
-                <a href="">LinkedIn</a> | 
-                <a href="">Github</a> | 
-                <a href="">Twitter</a>
+                <div class="footer-icons"> 
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-github"></i>
+                    <i class="fas fa-file-alt"></i> <!-- Insert tooltip: resume -->
+    
+                </div>
             </footer>
+            
         </div> 
        
+        
+        <!-- Modal -->
+        <aside class="modal"> 
+            <div class="modal-container"> 
+                <div class="modal-header">
+                    <div class="close-button"></div>
+                    <!-- <div class="terminal-header-text"> sohbaihe </div> -->
+                </div>
+                <div class="modal-content"> 
+
+                    This is a 4-month long project completed in school, under the module SMT203 Smart City Systems & Management. My main role in this project is a Python Backend Developer, where my key responsibilities include coding out the database, creating APIs, coding out the telegram bot and managing the interactions between the database flask app and telegram  bot. Besides that, I also created visualisations of survey data and mock locker usage data using Python Pandas.
+                    <br>
+                    This is a 4-month long project completed in school, under the module SMT203 Smart City Systems & Management. My main role in this project is a Python Backend Developer, where my key responsibilities include coding out the database, creating APIs, coding out the telegram bot and managing the interactions between the database flask app and telegram  bot. Besides that, I also created visualisations of survey data and mock locker usage data using Python Pandas.
+                    <br>
+                    This is a 4-month long project completed in school, under the module SMT203 Smart City Systems & Management. My main role in this project is a Python Backend Developer, where my key responsibilities include coding out the database, creating APIs, coding out the telegram bot and managing the interactions between the database flask app and telegram  bot. Besides that, I also created visualisations of survey data and mock locker usage data using Python Pandas.
+                    <br>
+                    Dedicated locker management that better maps user demand to available lockers in SMU.
+                                    Users can simply book a locker through the telegram bot by selecting their desired locker.
+                </div>
+            </div>
+        </aside>
+
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
         <script src="script.js" async defer></script>
     
