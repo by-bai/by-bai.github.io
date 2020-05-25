@@ -14,7 +14,10 @@
 
 body {
     font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
     background: #cfcee1; 
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -40,6 +43,7 @@ body {
 /* Header */ 
 header {
     font-family: 'DM Mono', monospace;
+    font-weight: 400;
     margin: 20px; 
     align-self: center; 
 
@@ -66,7 +70,7 @@ header {
     width: 1px; 
     height: 1.3em; 
     border-right: 2px solid #454fac; 
-    animation: blink 0.5s infinite ease; 
+    animation: blink 0.7s infinite ease; 
 }
 
 .h1-typing.hide-border::after {
@@ -76,7 +80,7 @@ header {
 .h2-typing {
     position: relative;
     padding: 30px 0; 
-    font-size: 1.4em; 
+    font-size: 1.3em; 
     font-family: 'Jost', sans-serif; 
     color: #525F7F;
     display: none; 
@@ -88,10 +92,17 @@ header {
     width: 1px; 
     height: 1.3em; 
     border-right: 2px solid #525F7F; 
-    animation: blink 0.5s infinite ease; 
+    animation: blink 0.7s infinite ease; 
 }
 
-
+.h3-typing {
+    font-size: 1.3em; 
+    animation: blink 0.7s infinite ease; 
+    background: #b8b6da; 
+    width: 10px;
+    height: 20px;
+    margin-top: 10px; 
+}
 @keyframes blink {
     0% {
         opacity: 0;
@@ -127,6 +138,22 @@ header {
 .view-projects:hover {
     background-color: rgba(69, 79, 172, 0.5); 
 }
+
+.view-resume {
+    background-color: rgba(69, 79, 172, 1); 
+    border-radius: 5px; 
+    color: #fff;
+    padding: 10px 15px; 
+    font-size: 1em; 
+    text-decoration: none; 
+    opacity: 0; 
+    transition: 1s ease-in-out;
+}
+
+.view-resume:hover {
+    background-color: rgba(69, 79, 172, 0.5); 
+}
+
 
 .call-to-action{
     margin-top: 20vh; 
@@ -394,8 +421,8 @@ main {
 
 .modal-container {
     position: relative; 
-    margin: 10vh auto;
-    max-width: 70vw; 
+    margin: 10vh 10vw;
+    position: relative;
 
 }
 .modal-header {
@@ -410,7 +437,7 @@ main {
 }
 
 .modal-content {
-    position: relative;
+    position: absolute;
     background: #cfcee1;
     padding: 20px; 
     max-height: 60vh;
@@ -420,6 +447,9 @@ main {
     text-align: justify; 
 }
 
+.modal-title {
+    font-size: 1.5em; 
+}
 .close-button {
     position: relative; 
     background: #c23e3e; 

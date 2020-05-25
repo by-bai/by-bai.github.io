@@ -7,23 +7,20 @@ var scroll = new SmoothScroll('[data-scroll]', {
 
 // typing animation
 
-const texts = ["Hi, I am Bai.", "Junior Developer. I aspire to deliver smart solutions that serve the community."];
+const texts = ["Hi, I'm Bai.", "Junior Developer. I aspire to deliver smart solutions that serve the community."];
+const h1 = document.querySelector('.h1-typing'); 
+const h2 = document.querySelector('.h2-typing'); 
+const button1 = document.querySelector('.view-projects'); 
+const button2 = document.querySelector('.view-resume'); 
+
 let count = 0; // 0 - h1, 1 - h2
 let index = 0; // index of letters
 let currentText = "";
 let letter = "";
-let h1 = document.querySelector('.h1-typing'); 
-let h2 = document.querySelector('.h2-typing'); 
-let button = document.querySelector('.view-projects'); 
 
 
 (function h1type(){
 	currentText = texts[count]; // start with 0 aka h1 first
-
-	// for(let index=1; index<(currentText.length+1); index++){
-	// 	letter = currentText.slice(0, index);
-	// 	h1.textContent = letter; 
-	// };
 
 	letter = currentText.slice(0, ++index); 
 	h1.textContent = letter; 
@@ -36,7 +33,7 @@ let button = document.querySelector('.view-projects');
 	}
 	setTimeout(h1type, 100); 
 
-})();
+})(); // this function is called when page is loaded
 
 
 function h2type(){
@@ -53,20 +50,17 @@ function h2type(){
 }
 
 function callToAction(){ 
-	button.style.opacity = '1'; 
+	button1.style.opacity = '1'; 
+	button2.style.opacity = '2'; 
 	
 }
 
-// click about-tab
+// terminal transition
 
-aboutTab = document.getElementById('about-tab');
-projectsTab = document.getElementById('projects-tab'); 
-aboutSection = document.querySelector('.section-about')
-projectSection = document.querySelector('.section-project-gallery'); 
-
-// modal 
-projectImg = document.querySelector('.img-wrapper'); 
-modal = document.querySelector('.modal'); 
+const aboutTab = document.getElementById('about-tab');
+const projectsTab = document.getElementById('projects-tab'); 
+const aboutSection = document.querySelector('.section-about')
+const projectSection = document.querySelector('.section-project-gallery'); 
 
 aboutTab.addEventListener('click', function(e) {
 	if (!aboutTab.classList.contains('current-tab')){
@@ -91,13 +85,43 @@ projectsTab.addEventListener('click', function(e) {
   });
 
 
-projectImg.addEventListener('click', function(e) {
-	modal.style.display = 'block'; 
+// modal 
 
-  });
+const projectImg = document.querySelectorAll('.img-wrapper'); 
+const modal = document.querySelector('.modal'); 
+
+projectImg.forEach(image => {
+	image.addEventListener('click', function(e) {
+
+	// get parent class: project item
+	let projectItem = image.parentElement;
+	console.log(projectItem); 
+
+	// get id of project item, get number at the back
+	let projectIndex = 'project-modal-'.concat(projectItem.id.split('-')[2]); 
+	console.log(projectIndex); 
+
+	// get modal by id project-modal-(number)
+	let projectModal = document.getElementById(projectIndex);
+	console.log(projectModal.classList); 
+	modal.style.display = 'block';
+	projectModal.classList.remove('hide');  
+
+	})});  
+	
 
 // When the user clicks anywhere outside of the modal, close it
+const allModals = document.querySelectorAll('.modal-content');
+function hideAllModals(){
+	allModals.forEach(modal => {
+		if(!(modal.classList.contains('hide'))){
+			modal.classList.add('hide')}});
+}
+
 window.onclick = function(event) {
 	if (event.target == modal) {
-	  modal.style.display = "none";
-	}}; 
+		modal.style.display = "none";
+		
+		hideAllModals(); 
+	}
+}; 
