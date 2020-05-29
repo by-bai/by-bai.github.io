@@ -21,7 +21,14 @@ body {
 
 }
 
-.container-1 {
+body.modal-open {
+    overflow: hidden;
+}
+
+  
+/* Layout */
+
+.container-1 { 
     display: flex;
     flex-direction: column;
     max-width: 1000px;
@@ -49,13 +56,6 @@ header {
 
 
 }
-
-/* .header-wrapper {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
-} */
 
 .h1-typing { 
     position: relative; 
@@ -95,35 +95,23 @@ header {
     animation: blink 0.7s infinite ease; 
 }
 
-.h3-typing {
-    font-size: 1.3em; 
-    animation: blink 0.7s infinite ease; 
-    background: #b8b6da; 
-    width: 10px;
-    height: 20px;
-    margin-top: 10px; 
-}
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1; 
-    }
-}
-
-
-
+/* Icons */ 
 .fab {
     color: #525F7F;
     font-size: 2em; 
-
- }
+}
 
 .fas {
     color: #525F7F;
     font-size: 1.8em; 
 }
+
+/* call-to-action buttons */ 
+
+.call-to-action{
+    margin-top: 20vh; 
+}
+
 .view-projects {
     background-color: rgba(69, 79, 172, 1); 
     border-radius: 5px; 
@@ -154,20 +142,14 @@ header {
     background-color: rgba(69, 79, 172, 0.5); 
 }
 
-
-.call-to-action{
-    margin-top: 20vh; 
-}
-
-/* Main */ 
+/* Main (Terminal) */ 
 
 main {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-    /* margin: 0 20px; */
-     
-    
+
 }
 
+/* Terminal - Header */ 
 .terminal-header {
     position: relative; 
     background: #e6e1ec;
@@ -178,14 +160,11 @@ main {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     
-
 }
 
 .terminal-header-text { 
     font-size: 1em; 
 }
-
-/* maybe can add shadow to the circles  */
 
 .circle-1 {
     position: absolute; 
@@ -217,7 +196,7 @@ main {
 
 }
 
-/* Main - Nav */ 
+/* Terminal - Nav */ 
 .terminal-tabs ul {
     background: #e6e1ec;
     max-width: 100%; 
@@ -237,18 +216,12 @@ main {
     width: 100%; 
     padding: 7px; 
     text-align: center; 
-    /* border: solid 5px #333;   */
 }
 
 .terminal-tabs .current-tab {
-    /* background-color: #6f6da5;  */
     background-color: #b8b6da;
     border: 1px solid #f7f1ff; 
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    /* -webkit-box-shadow: inset 14px 10px 210px -4px #bcb6c3;
-    -moz-box-shadow: inset 14px 10px 210px -4px #bcb6c3;
-    box-shadow: inset 14px 10px 210px -4px #bcb6c3; */
-    /* border: solid 3px #a8a5f5;  */
 }
 
 .terminal-tabs li:hover {
@@ -257,7 +230,7 @@ main {
     text-decoration: none; 
 }
 
-/* Content */
+/* Terminal - Content */
 
 .terminal-body { 
     background: #3a3957; 
@@ -269,14 +242,16 @@ main {
 
 }
 
-.section-container {
+.terminal-container {
     width: 100%;
     height: 100%; 
     position: relative; 
     /* overflow: auto;  */
 
 }
-.section-about {
+
+/* Terminal - Content - About */
+.terminal-about {
     position: absolute;
     width: 95%; 
     height: 100%; 
@@ -292,14 +267,24 @@ main {
     color: #fff;
 }
 
-.resume-link {
+.about-link {
     background: #b8b6da;
     color: #525F7F;
     padding: 2px 4px; 
 
 }
 
-.section-project-gallery {
+.about-typing {
+    font-size: 1.3em; 
+    animation: blink 0.7s infinite ease; 
+    background: #b8b6da; 
+    width: 10px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+/* Terminal - Content - Projects */ 
+.terminal-project-gallery {
     position: absolute;
     transition: 1s ease-in-out;
     z-index: 99; 
@@ -307,11 +292,6 @@ main {
     grid-template-columns: 1fr 1fr;
     height: 100%; 
     overflow: auto; 
-}
-
-.hide {
-    opacity: 0; 
-    z-index: -1; 
 }
 
 .project-item {
@@ -371,9 +351,7 @@ main {
 
 .project-tag {
     display: inline-block; 
-    background-color: #b8b6da; 
-    border-radius: 5px; 
-    color: #525f7f;
+    color: #b8b6da; 
     padding: 2px 5px; 
     font-size: 0.8em; 
     text-decoration: none; 
@@ -386,24 +364,29 @@ main {
 
 .project-links li {
     display: inline-block; 
-    background-color: #454fac; 
+    background-color: rgba(184,182,218,1);
     border-radius: 5px; 
-    color: #fff;
     padding: 2px 5px; 
     font-size: 1em; 
-    text-decoration: none; 
 
 }
 
 .project-links li:hover {
     cursor: pointer; 
-    opacity: 50%; 
+    background-color: rgba(184,182,218,0.7);
 }
 
-/* .project-title {
-    font-weight: bold; 
-} */
+.project-links a {
+    text-decoration: none; 
+    color: #525f7f;
+}
 
+.hide {
+    opacity: 0; 
+    z-index: -1; 
+}
+
+/* Modal */ 
 .modal { /* background */ 
     position: fixed; 
     z-index: 100; /*sits on top*/ 
@@ -450,6 +433,7 @@ main {
 .modal-title {
     font-size: 1.5em; 
 }
+
 .close-button {
     position: relative; 
     background: #c23e3e; 
@@ -468,17 +452,41 @@ footer {
 }
 
 
-@media (max-width: 845px) {
+/* Keyframes */ 
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
 
-    .section-project-gallery {
-        grid-template-columns: 1fr 
-    } 
+/* Media Queries */ 
+@media only screen and (max-width: 530px) {
+    .h1-typing {
+        font-size: 2.5em; 
+    }
 
-    .section-about {
+    .h2-typing {
+        font-size: 1.0em; 
+    }
+    .terminal-project-gallery {
+        grid-template-columns: 1fr;
         -ms-overflow-style: none;  /* Internet Explorer 10+ */
         scrollbar-width: none;  /* Firefox */
-    }
-    .section-about::-webkit-scrollbar { 
+    } 
+    .terminal-project-gallery::-webkit-scrollbar { 
         display: none;  /* Safari and Chrome */
     }
 }
+
+@media only screen and (max-width: 376px) {
+   .fab {
+       font-size: 1.7em;
+   }
+   .fas {
+       font-size: 1.7em;
+   }
+}
+

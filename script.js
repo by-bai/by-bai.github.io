@@ -59,8 +59,8 @@ function callToAction(){
 
 const aboutTab = document.getElementById('about-tab');
 const projectsTab = document.getElementById('projects-tab'); 
-const aboutSection = document.querySelector('.section-about')
-const projectSection = document.querySelector('.section-project-gallery'); 
+const aboutSection = document.querySelector('.terminal-about')
+const projectSection = document.querySelector('.terminal-project-gallery'); 
 
 aboutTab.addEventListener('click', function(e) {
 	if (!aboutTab.classList.contains('current-tab')){
@@ -89,39 +89,52 @@ projectsTab.addEventListener('click', function(e) {
 
 const projectImg = document.querySelectorAll('.img-wrapper'); 
 const modal = document.querySelector('.modal'); 
+const body = document.querySelector('body');
 
 projectImg.forEach(image => {
 	image.addEventListener('click', function(e) {
 
 	// get parent class: project item
 	let projectItem = image.parentElement;
-	console.log(projectItem); 
+	//console.log(projectItem); 
 
 	// get id of project item, get number at the back
 	let projectIndex = 'project-modal-'.concat(projectItem.id.split('-')[2]); 
-	console.log(projectIndex); 
+	//console.log(projectIndex); 
 
 	// get modal by id project-modal-(number)
 	let projectModal = document.getElementById(projectIndex);
-	console.log(projectModal.classList); 
+	//console.log(projectModal.classList); 
 	modal.style.display = 'block';
+	body.classList.add('modal-open');
 	projectModal.classList.remove('hide');  
 
 	})});  
 	
 
-// When the user clicks anywhere outside of the modal, close it
+// hide modals
 const allModals = document.querySelectorAll('.modal-content');
+
 function hideAllModals(){
 	allModals.forEach(modal => {
 		if(!(modal.classList.contains('hide'))){
 			modal.classList.add('hide')}});
 }
 
+// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 	if (event.target == modal) {
 		modal.style.display = "none";
-		
+		body.classList.remove('modal-open');
 		hideAllModals(); 
 	}
 }; 
+
+// When the user clicks on red button, close it
+const closeButton = document.querySelector('.close-button');
+
+closeButton.addEventListener('click', function(e) {
+	closeButton.parentElement.parentElement.parentElement.style.display = "none";
+	body.classList.remove('modal-open');
+	hideAllModals(); 
+  });
